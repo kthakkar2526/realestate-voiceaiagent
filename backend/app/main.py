@@ -8,7 +8,7 @@ from app.scheduler import start_scheduler, stop_scheduler
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    create_tables()
+    # create_tables()
     start_scheduler()
     yield
     stop_scheduler()
