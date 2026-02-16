@@ -20,10 +20,10 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#13110e]">
+      <div className="min-h-screen flex items-center justify-center bg-[#faf8f5]">
         <div className="text-center">
           <div className="w-10 h-10 border-2 border-[#c8a97e] border-t-transparent rounded-full animate-spin mx-auto" />
-          <p className="mt-4 text-[#c8a97e] text-sm font-sans tracking-wide">Loading</p>
+          <p className="mt-4 text-[#8a8279] text-sm font-sans tracking-wide">Loading</p>
         </div>
       </div>
     );
@@ -32,9 +32,9 @@ export default function Home() {
   if (!user) return null;
 
   return (
-    <div className="min-h-screen bg-[#13110e] text-[#f0ebe4] grain">
+    <div className="min-h-screen bg-[#faf8f5] text-[#1a1714] grain">
       {/* Nav */}
-      <nav className="border-b border-[#2e2a24]">
+      <nav className="border-b border-[#e0d9cf]">
         <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
           <div className="flex items-center gap-3 animate-fade-in">
             <div className="w-9 h-9 border border-[#c8a97e] rounded-sm flex items-center justify-center">
@@ -48,10 +48,10 @@ export default function Home() {
             <span className="text-sm text-[#8a8279] tracking-wide">
               {user.name || user.phone}
             </span>
-            <a href="/admin" className="text-sm text-[#8a8279] hover:text-[#c8a97e] transition-colors duration-300 tracking-wide">
+            <a href="/admin" className="text-sm text-[#8a8279] hover:text-[#a88b5e] transition-colors duration-300 tracking-wide">
               Admin
             </a>
-            <button onClick={logout} className="text-sm text-[#5a4a3a] hover:text-[#c8a97e] transition-colors duration-300 tracking-wide">
+            <button onClick={logout} className="text-sm text-[#b0a89e] hover:text-[#a88b5e] transition-colors duration-300 tracking-wide">
               Logout
             </button>
           </div>
@@ -62,13 +62,13 @@ export default function Home() {
       <section className="relative overflow-hidden">
         {/* Warm gradient atmosphere */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#c8a97e]/8 via-transparent to-transparent" />
-        <div className="absolute top-16 left-1/3 w-[500px] h-[500px] bg-[#c8a97e]/5 rounded-full blur-[120px]" />
-        <div className="absolute top-32 right-1/4 w-80 h-80 bg-[#8b6f47]/5 rounded-full blur-[100px]" />
+        <div className="absolute top-16 left-1/3 w-[500px] h-[500px] bg-[#c8a97e]/8 rounded-full blur-[120px]" />
+        <div className="absolute top-32 right-1/4 w-80 h-80 bg-[#a88b5e]/6 rounded-full blur-[100px]" />
 
         <div className="relative max-w-7xl mx-auto px-8 pt-24 pb-20">
           <div className="text-center max-w-4xl mx-auto">
             {/* Status pill */}
-            <div className="inline-flex items-center gap-2.5 border border-[#2e2a24] rounded-full px-5 py-2 mb-10 animate-fade-up">
+            <div className="inline-flex items-center gap-2.5 border border-[#e0d9cf] rounded-full px-5 py-2 mb-10 animate-fade-up bg-white/50">
               <div className="w-1.5 h-1.5 bg-[#c8a97e] rounded-full animate-gentle-pulse" />
               <span className="text-xs text-[#8a8279] uppercase tracking-[0.2em] font-sans">AI Concierge Active</span>
             </div>
@@ -76,7 +76,7 @@ export default function Home() {
             <h1 className="font-serif text-5xl md:text-7xl leading-[1.1] tracking-tight animate-fade-up delay-100">
               Discover Your
               <br />
-              <span className="italic text-[#c8a97e]">Perfect Address</span>
+              <span className="italic text-[#a88b5e]">Perfect Address</span>
             </h1>
 
             <p className="mt-8 text-lg text-[#8a8279] max-w-xl mx-auto leading-relaxed font-sans animate-fade-up delay-200">
@@ -90,7 +90,7 @@ export default function Home() {
                   const voiceBtn = document.querySelector("[title='Talk to AI Assistant']") as HTMLButtonElement;
                   voiceBtn?.click();
                 }}
-                className="group bg-[#c8a97e] hover:bg-[#b8995e] text-[#13110e] px-8 py-3.5 rounded-sm font-sans font-medium text-sm tracking-wide flex items-center gap-3 transition-all duration-300"
+                className="group bg-[#c8a97e] hover:bg-[#a88b5e] text-white px-8 py-3.5 rounded-sm font-sans font-medium text-sm tracking-wide flex items-center gap-3 transition-all duration-300"
               >
                 <svg className="w-4.5 h-4.5 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
@@ -102,7 +102,7 @@ export default function Home() {
                   const chatBtn = document.querySelector(".fixed.bottom-6.right-6 button") as HTMLButtonElement;
                   chatBtn?.click();
                 }}
-                className="group border border-[#2e2a24] hover:border-[#c8a97e]/40 text-[#f0ebe4] px-8 py-3.5 rounded-sm font-sans text-sm tracking-wide flex items-center gap-3 transition-all duration-300 hover:bg-[#c8a97e]/5"
+                className="group border border-[#e0d9cf] hover:border-[#c8a97e]/60 text-[#1a1714] px-8 py-3.5 rounded-sm font-sans text-sm tracking-wide flex items-center gap-3 transition-all duration-300 hover:bg-[#c8a97e]/5"
               >
                 <svg className="w-4.5 h-4.5 text-[#8a8279] group-hover:text-[#c8a97e] transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -115,16 +115,16 @@ export default function Home() {
 
         {/* Decorative divider */}
         <div className="max-w-7xl mx-auto px-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-[#2e2a24] to-transparent" />
+          <div className="h-px bg-gradient-to-r from-transparent via-[#e0d9cf] to-transparent" />
         </div>
       </section>
 
       {/* How It Works */}
       <section className="max-w-7xl mx-auto px-8 py-24">
         <div className="flex items-center gap-4 mb-16 animate-fade-up">
-          <div className="h-px flex-1 bg-[#2e2a24]" />
+          <div className="h-px flex-1 bg-[#e0d9cf]" />
           <h2 className="text-xs uppercase tracking-[0.3em] text-[#8a8279] font-sans">How It Works</h2>
-          <div className="h-px flex-1 bg-[#2e2a24]" />
+          <div className="h-px flex-1 bg-[#e0d9cf]" />
         </div>
         <div className="grid md:grid-cols-3 gap-12">
           {[
@@ -158,13 +158,13 @@ export default function Home() {
               className={`group animate-fade-up delay-${(i + 1) * 200}`}
             >
               <div className="flex items-start gap-5">
-                <div className="w-14 h-14 border border-[#2e2a24] rounded-sm flex items-center justify-center flex-shrink-0 group-hover:border-[#c8a97e]/40 transition-colors duration-500">
+                <div className="w-14 h-14 border border-[#e0d9cf] rounded-sm flex items-center justify-center flex-shrink-0 group-hover:border-[#c8a97e]/60 transition-colors duration-500 bg-white/60">
                   <svg className="w-5 h-5 text-[#c8a97e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     {item.icon}
                   </svg>
                 </div>
                 <div>
-                  <span className="text-xs text-[#5a4a3a] font-sans tracking-[0.2em]">{item.step}</span>
+                  <span className="text-xs text-[#b0a89e] font-sans tracking-[0.2em]">{item.step}</span>
                   <h3 className="text-xl font-serif mt-1 tracking-tight">{item.title}</h3>
                   <p className="text-sm text-[#8a8279] mt-3 leading-relaxed font-sans">{item.desc}</p>
                 </div>
@@ -175,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="border-t border-b border-[#2e2a24]">
+      <section className="border-t border-b border-[#e0d9cf] bg-[#f3efe9]">
         <div className="max-w-7xl mx-auto px-8 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {[
@@ -185,10 +185,10 @@ export default function Home() {
               { value: "100%", label: "Free to Use" },
             ].map((stat, i) => (
               <div key={stat.label} className={`text-center animate-fade-up delay-${(i + 1) * 100}`}>
-                <p className="text-4xl font-serif text-[#c8a97e] tracking-tight">
+                <p className="text-4xl font-serif text-[#a88b5e] tracking-tight">
                   {stat.value}
                 </p>
-                <p className="text-xs text-[#5a4a3a] mt-2 uppercase tracking-[0.2em] font-sans">{stat.label}</p>
+                <p className="text-xs text-[#8a8279] mt-2 uppercase tracking-[0.2em] font-sans">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -203,7 +203,7 @@ export default function Home() {
             Everything a property team needs to convert leads faster with AI
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#2e2a24]">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#e0d9cf]">
           {[
             { title: "Voice AI Agent", desc: "Natural voice conversations — like speaking to a real estate professional", tag: "Primary" },
             { title: "Chat Assistant", desc: "Text-based chat with property cards, booking confirmations, and smart follow-ups", tag: "Secondary" },
@@ -214,33 +214,33 @@ export default function Home() {
           ].map((feature, i) => (
             <div
               key={feature.title}
-              className={`bg-[#13110e] p-8 group hover:bg-[#1a1714] transition-colors duration-500 animate-fade-up delay-${(i + 1) * 100}`}
+              className={`bg-[#faf8f5] p-8 group hover:bg-[#f3efe9] transition-colors duration-500 animate-fade-up delay-${(i + 1) * 100}`}
             >
-              <span className="text-[10px] font-sans font-medium uppercase tracking-[0.2em] text-[#c8a97e] border border-[#c8a97e]/20 px-2.5 py-1 rounded-sm">
+              <span className="text-[10px] font-sans font-medium uppercase tracking-[0.2em] text-[#a88b5e] border border-[#c8a97e]/30 px-2.5 py-1 rounded-sm">
                 {feature.tag}
               </span>
-              <h3 className="font-serif text-lg mt-5 tracking-tight group-hover:text-[#c8a97e] transition-colors duration-500">{feature.title}</h3>
-              <p className="text-sm text-[#5a4a3a] mt-2 leading-relaxed font-sans group-hover:text-[#8a8279] transition-colors duration-500">{feature.desc}</p>
+              <h3 className="font-serif text-lg mt-5 tracking-tight group-hover:text-[#a88b5e] transition-colors duration-500">{feature.title}</h3>
+              <p className="text-sm text-[#8a8279] mt-2 leading-relaxed font-sans">{feature.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="border-t border-[#2e2a24]">
+      <section className="border-t border-[#e0d9cf] bg-[#f3efe9]">
         <div className="max-w-7xl mx-auto px-8 py-24 text-center">
           <h2 className="font-serif text-3xl md:text-4xl tracking-tight animate-fade-up">
             Ready to find your
-            <span className="italic text-[#c8a97e]"> dream home</span>?
+            <span className="italic text-[#a88b5e]"> dream home</span>?
           </h2>
-          <p className="text-[#5a4a3a] mt-4 font-sans animate-fade-up delay-100">Start a conversation with our AI — it takes 30 seconds.</p>
+          <p className="text-[#8a8279] mt-4 font-sans animate-fade-up delay-100">Start a conversation with our AI — it takes 30 seconds.</p>
           <div className="mt-10 animate-fade-up delay-200">
             <button
               onClick={() => {
                 const voiceBtn = document.querySelector("[title='Talk to AI Assistant']") as HTMLButtonElement;
                 voiceBtn?.click();
               }}
-              className="bg-[#c8a97e] hover:bg-[#b8995e] text-[#13110e] px-10 py-4 rounded-sm font-sans font-medium text-sm tracking-wide transition-all duration-300"
+              className="bg-[#c8a97e] hover:bg-[#a88b5e] text-white px-10 py-4 rounded-sm font-sans font-medium text-sm tracking-wide transition-all duration-300"
             >
               Start Voice Call
             </button>
@@ -249,17 +249,17 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-[#2e2a24] py-10">
+      <footer className="border-t border-[#e0d9cf] py-10">
         <div className="max-w-7xl mx-auto px-8 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-7 h-7 border border-[#2e2a24] rounded-sm flex items-center justify-center">
+            <div className="w-7 h-7 border border-[#e0d9cf] rounded-sm flex items-center justify-center">
               <svg className="w-3.5 h-3.5 text-[#c8a97e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
               </svg>
             </div>
-            <span className="text-sm font-serif text-[#5a4a3a] tracking-wide">PropertyAI</span>
+            <span className="text-sm font-serif text-[#8a8279] tracking-wide">PropertyAI</span>
           </div>
-          <p className="text-xs text-[#3a342c] tracking-wide font-sans">
+          <p className="text-xs text-[#b0a89e] tracking-wide font-sans">
             Powered by Gemini AI, Vapi.ai, Langfuse
           </p>
         </div>

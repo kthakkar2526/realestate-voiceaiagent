@@ -12,8 +12,8 @@ export default function MessageBubble({ message }: { message: ChatMessage }) {
         <div
           className={`px-4 py-3 rounded-sm text-sm leading-relaxed font-sans ${
             isUser
-              ? "bg-[#c8a97e] text-[#13110e] rounded-br-none"
-              : "bg-[#1a1714] border border-[#2e2a24] text-[#f0ebe4] rounded-bl-none"
+              ? "bg-[#c8a97e] text-white rounded-br-none"
+              : "bg-white border border-[#e0d9cf] text-[#1a1714] rounded-bl-none"
           }`}
         >
           <p className="whitespace-pre-wrap">{message.text}</p>
@@ -26,13 +26,13 @@ export default function MessageBubble({ message }: { message: ChatMessage }) {
           </div>
         )}
         {message.booking && message.booking.success && (
-          <div className="mt-2 bg-[#7a9e6e]/10 border border-[#7a9e6e]/20 rounded-sm p-3.5 text-sm font-sans">
-            <p className="font-medium text-[#7a9e6e]">Visit Booked</p>
-            <p className="text-[#8fb87e] mt-0.5">{message.booking.property_title}</p>
-            <p className="text-[#7a9e6e]/70 text-xs mt-1">
+          <div className="mt-2 bg-[#e8f5e2] border border-[#c5e1b8] rounded-sm p-3.5 text-sm font-sans">
+            <p className="font-medium text-[#4a7c3f]">Visit Booked</p>
+            <p className="text-[#5a8c4e] mt-0.5">{message.booking.property_title}</p>
+            <p className="text-[#4a7c3f]/70 text-xs mt-1">
               {message.booking.visit_date} at {message.booking.visit_time}
             </p>
-            <p className="text-xs text-[#5a4a3a] mt-1.5">
+            <p className="text-xs text-[#8a8279] mt-1.5">
               Booking #{message.booking.booking_id}
             </p>
           </div>

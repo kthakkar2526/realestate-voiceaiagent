@@ -95,8 +95,8 @@ export default function VoiceButton() {
     <>
       {/* Voice Call Modal */}
       {(isActive || isConnecting) && (
-        <div className="fixed inset-0 bg-[#13110e]/80 backdrop-blur-sm z-50 flex items-center justify-center px-4">
-          <div className="bg-[#1a1714] border border-[#2e2a24] rounded-sm w-full max-w-sm p-8 text-center">
+        <div className="fixed inset-0 bg-[#1a1714]/40 backdrop-blur-sm z-50 flex items-center justify-center px-4">
+          <div className="bg-white border border-[#e0d9cf] rounded-sm w-full max-w-sm p-8 text-center shadow-xl">
             {/* Animated circle */}
             <div className="mx-auto mb-8">
               <div
@@ -122,10 +122,10 @@ export default function VoiceButton() {
               </div>
             </div>
 
-            <h3 className="text-lg font-serif text-[#f0ebe4] tracking-tight">
+            <h3 className="text-lg font-serif text-[#1a1714] tracking-tight">
               {isConnecting ? "Connecting..." : "Listening..."}
             </h3>
-            <p className="text-sm text-[#5a4a3a] mt-1.5 font-sans">
+            <p className="text-sm text-[#8a8279] mt-1.5 font-sans">
               {isConnecting
                 ? "Setting up voice connection"
                 : "Speak naturally — I'm your property concierge"}
@@ -135,13 +135,13 @@ export default function VoiceButton() {
             {transcript.length > 0 && (
               <div className="mt-6 max-h-48 overflow-y-auto text-left space-y-2.5 px-1">
                 {transcript.slice(-4).map((msg, i) => (
-                  <div key={i} className={`text-sm font-sans ${msg.role === "user" ? "text-[#8a8279]" : "text-[#c8a97e]"}`}>
-                    <span className="text-[10px] text-[#3a342c] uppercase tracking-[0.15em]">{msg.role === "user" ? "You" : "AI"}:</span>{" "}
+                  <div key={i} className={`text-sm font-sans ${msg.role === "user" ? "text-[#5a4a3a]" : "text-[#a88b5e]"}`}>
+                    <span className="text-[10px] text-[#b0a89e] uppercase tracking-[0.15em]">{msg.role === "user" ? "You" : "AI"}:</span>{" "}
                     {msg.text}
                   </div>
                 ))}
                 {currentSpeech && (
-                  <div className="text-sm text-[#3a342c] italic font-sans">
+                  <div className="text-sm text-[#b0a89e] italic font-sans">
                     {currentSpeech}...
                   </div>
                 )}
@@ -163,7 +163,7 @@ export default function VoiceButton() {
       {!isActive && !isConnecting && (
         <button
           onClick={startCall}
-          className="fixed bottom-24 right-6 z-40 bg-[#c8a97e] text-[#13110e] w-14 h-14 rounded-sm shadow-lg hover:bg-[#b8995e] transition-all duration-300 hover:shadow-[#c8a97e]/10 hover:shadow-xl flex items-center justify-center"
+          className="fixed bottom-24 right-6 z-40 bg-[#c8a97e] text-white w-14 h-14 rounded-sm shadow-lg hover:bg-[#a88b5e] transition-all duration-300 hover:shadow-xl flex items-center justify-center"
           title="Talk to AI Assistant"
         >
           <svg
